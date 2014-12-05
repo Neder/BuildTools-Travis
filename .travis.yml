@@ -13,5 +13,5 @@ after_success:
   - "rm -rf apache-maven*"
   - "rm -rf jacobe*"
   - "tar -cvzf BuildTools_${TRAVIS_JOB_NUMBER}_Returns.tar.gz *"
-  - "chmod ./upload.sh"
+  - "sudo chmod 777 ./upload.sh"
   - "./upload.sh"
