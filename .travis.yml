@@ -1,0 +1,12 @@
+sudo apt-get install git openjdk-7-jdk tar
+
+language: java
+jdk:
+  - openjdk7
+script:
+  - name=$(date +%Y%m%d)
+  - cd /home/travis/build/Neder/BuildTools-Travis
+  - wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+  - sudo apt-get install git tar
+  - java -jar BuildTools.jar
+  - ls
